@@ -107,9 +107,10 @@ for(let i=0; i < hobbits.length; i++) {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-
+const $div = $('<div/>').attr("id", "the-ring");
   // 2. add the ring as a child of Frodo
-
+var elems = document.getElementsByClassName("hobbit");
+$(elems[0]).prepend($div);
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
