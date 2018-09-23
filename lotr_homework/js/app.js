@@ -84,8 +84,7 @@ const makeHobbits = () => {
   // 1. display an unordered list of the hobbits in the shire.
 const $ul = $('<ul/>');
 $("#The-Shire").append($ul);
-// const $li = $('<li/>').text(hobbits[1]);
-// $('ul').prepend($li);
+
   
   // 2. give each hobbit a class of "hobbit"
 
@@ -126,8 +125,13 @@ $(elems[0]).prepend($div);
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
-
+  const $ul = $('<ul/>').attr("id", "mordor");
+  $("#Mordor").append($ul);
   // 2. give each of the baddies a class of "baddy"
+for(let i=0; i < baddies.length; i++) {
+  const $li = $("<li/>").text(baddies[i]).attr("class", "baddy");
+  $('#mordor').append($li);
+}
 
   // 3. remember to append them to Mordor
 };
