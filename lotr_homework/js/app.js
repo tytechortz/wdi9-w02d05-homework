@@ -69,11 +69,6 @@ $body.append($section);
     const $h1 = $('<h1/>').text(lands[i]);
     $article.append($h1);
   }
-  // for(let i=0; i<lands.length; i++){
-  //     $('article id=' + lands[i] +'/>').text(<h1/>)
-
-      // const $article = $('<article id='+(lands[i])+'<article/>');
-      // $section.append($article);
 }
 
 // COMMIT YOUR WORK
@@ -87,13 +82,20 @@ const makeHobbits = () => {
   console.log('Make hobbits');
 
   // 1. display an unordered list of the hobbits in the shire.
-
+const $ul = $('<ul/>');
+$("#The-Shire").append($ul);
+// const $li = $('<li/>').text(hobbits[1]);
+// $('ul').prepend($li);
+  
   // 2. give each hobbit a class of "hobbit"
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
-
+for(let i=0; i < hobbits.length; i++) {
+  const $li = $("<li/>").text(hobbits[i]).attr("class", "hobbit");
+  $('ul').append($li);
+ };
 };
 
 // COMMIT YOUR WORK
