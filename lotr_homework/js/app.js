@@ -106,10 +106,9 @@ for(let i=0; i < hobbits.length; i++) {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
-const $div = $('<div/>').attr("id", "the-ring");
   // 2. add the ring as a child of Frodo
-var elems = document.getElementsByClassName("hobbit");
-$(elems[0]).prepend($div);
+//var elems = document.getElementsByClassName("hobbit");
+$(".hobbit:contains('Frodo'):first").append($("<div id=\"the-ring\"></div>"));
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
@@ -164,6 +163,7 @@ for(let i=0; i < buddies.length; i++) {
 // Chapter 6
 // ============
 const leaveTheShire = () => {
+  
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
