@@ -21,3 +21,7 @@ button {
   border-width: 5px;
   
 }
+
+.boromir {
+  text-decoration: line-through;
+}

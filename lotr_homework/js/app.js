@@ -221,7 +221,7 @@ const theBalrog = () => {
 $(".buddy:contains('Gandalf'):first").text("Gandalf the White");
   
   // 2. add a class "the-white" to this element
-  $(".buddy:contains('Gandalf'):first").addClass("the-white");
+$(".buddy:contains('Gandalf'):first").addClass("the-white");
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 };
@@ -235,11 +235,12 @@ $(".buddy:contains('Gandalf'):first").text("Gandalf the White");
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-
+window.alert("The Horn of Gondor has been blow");
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+$(".buddy:contains('Boromir'):first").addClass("boromir");
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
-
+  $(".baddy:contains('Uruk'):first").remove();
 };
 
 // COMMIT YOUR WORK
