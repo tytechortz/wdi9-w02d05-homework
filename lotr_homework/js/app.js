@@ -166,8 +166,9 @@ const leaveTheShire = () => {
   
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-
+//$(".hobbit:contains('Frodo'):first").append($("<div id=\"the-ring\"></div>"));
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
+$("#The-Shire > ul").appendTo("#Rivendell");
 
 };
 
