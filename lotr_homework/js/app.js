@@ -181,7 +181,7 @@ $("#The-Shire > ul").appendTo("#Rivendell");
 const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-//$(".hobbit:contains('Frodo'):first").append($("<div id=\"the-ring\"></div>"));
+
   // hint: You can get a list of elements by tag name, such as 'aside'
 $(".buddy:contains('Strider'):first").text("Aragorn");
 };
@@ -193,14 +193,19 @@ $(".buddy:contains('Strider'):first").text("Aragorn");
 // Chapter 8
 // ============
 const forgeTheFellowShip = () => {
-
+console.log('fellowship');
   // 1. create a new div with an id 'the-fellowship'
-
+const $div = $("<div/>").attr("id", "the-fellowship");
   // 2. add an h1 with the text 'The Fellowship' to this new div
+const $h1 = $("<h1/>").text('The Fellowship');
+
 
   // 3. append the fellowship to middle-earth
-
+$div.append($h1);
+$("#middle-earth").append($div);
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+$("#Rivendell > ul").appendTo("#the-fellowship");
+$("#middle-earth > aside").appendTo("#the-fellowship");
 
 };
 
